@@ -1,0 +1,134 @@
+:root{
+    --black: #1E1E1E;
+    --white: #FFFFFF;
+    }
+
+body{
+margin: 0;
+background-color: var(--white);
+font-family: Raleway;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid var(--black) ;
+}
+
+.header__logo{
+    height: 8rem;
+    width: 8rem;}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-family: Raleway;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.header__menu__icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__menu__icon:hover{
+    text-decoration: underline
+}
+
+.header__menu__icon__img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.header__menu__icon__p{
+    padding-top: 0.2rem;
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.main__entete{
+    background-image: url('Ressources/Backgrounds/entete.jpg');    
+    height: 35rem;
+    width: screen;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__entete__title{
+    font-family: Lora;
+    color: var(--white);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main__entete__h3{
+    font-family: Lora;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.main__entete__button{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.main__genre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.main__genre__homme{
+    background-image: url(Ressources/articles/Hommes.webp);
+    background-size: cover;
+    height: 40rem;
+    width: 30rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    box-shadow: ;
+}
+
+.main__genre__homme__title{
+    padding-right: 1rem;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.main__genre__femme{
+    background-image: url(Ressources/articles/Femmes.webp);
+    background-size: cover;
+    height: 40rem;
+    width: 30rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.main__genre__femme__title{
+    padding-right: 1rem;
+    font-size: 3rem;
+    font-weight: bolder;
+}
