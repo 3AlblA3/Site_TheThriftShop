@@ -2,7 +2,8 @@
     --black: #1E1E1E;
     --white: #FFFFFF;
     --red: #E00707;
-    --grey: #8C8C8C
+    --grey: #8C8C8C;
+    --lightGrey: #EAEAEA;
     }
 
 body{
@@ -29,7 +30,7 @@ nav{
     align-items: center;
 }
 
-a{
+.header__link{
     padding: 2rem;
     font-size: 1.8rem;
     font-family: Raleway;
@@ -38,14 +39,17 @@ a{
     font-weight: bolder;
 }
 
-a:hover{
-    text-decoration: underline;
+.header__link:hover{
+    text-decoration: underline
 }
 
 .header__menu__icon{
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: var(--black)
 }
 
 .header__menu__icon:hover{
@@ -98,13 +102,15 @@ a:hover{
 
 .main__entete__button:hover{
     scale: 110%;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black)
 }
 
 .main__genre{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 2rem;
+    padding: 4rem;
+
 }
 
 .main__genre__homme{
@@ -116,6 +122,13 @@ a:hover{
     justify-content: end;
     align-items: end;
     border-radius: 1rem;
+    border: solid var(--grey);
+    transition-duration: 0.2s;
+}
+
+.main__genre__homme:hover{
+    scale: 105%;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
 }
 
 .main__genre__homme__title{
@@ -132,7 +145,8 @@ a:hover{
     display: flex;
     justify-content: end;
     align-items: end;
-    border-radius: 1rem
+    border-radius: 1rem;
+    border: solid var(--grey);
 }
 
 .main__genre__femme__title{
@@ -144,10 +158,14 @@ a:hover{
 .main__populaire{
     display: flex;
     flex-direction: column;    
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-left: 3rem;
 }
 
 .main__populaire__title{
     padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 .main__populaire__title:hover{
@@ -158,6 +176,8 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .main__populaire__container__article{
@@ -167,6 +187,18 @@ a:hover{
     border-radius: 1rem;
     border: solid var(--grey);
     width: 25%;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    color: var(--black)
+}
+
+.main__populaire__container__article:hover {
+    scale: 110%;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
+        .main__populaire__container__article__header__title{
+        text-decoration: underline;
+    }
+    
 }
 
 .main__populaire__container__article__img{
@@ -209,3 +241,110 @@ a:hover{
     color: var(--red);
     padding-left: 1rem;
 }
+
+.main__member{
+    background-image: url('Ressources/Backgrounds/background_form.jpg');    
+    height: 35rem;
+    width: screen;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+}
+
+.main__member__title{
+    font-family: Lora;
+    color: var(--white);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.main__member__h3{
+    font-family: Lora;
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+.main__member__button{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition-duration: 0.2s;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.main__member__button:hover{
+    scale: 110%;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black)
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightGrey) ;
+    border: solid var(--grey); 
+    padding: 1rem;
+}
+
+.footer__container__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer__container__links__p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--black) 
+}
+
+.footer__container__links__p:hover{
+    text-decoration: underline;
+}
+
+
+.footer__container__socials__img{
+    height: 2rem;
+    width: 2rem;
+    padding: 2rem;
+}
+
+.footer__container__socials{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__countries{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+
+}
+
+.footer__countries__p{
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--black);
+    padding: 1rem;
+}
+
+.footer__countries__p:hover{
+    text-decoration: underline;
+}
+
