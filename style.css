@@ -1,12 +1,14 @@
 :root{
     --black: #1E1E1E;
     --white: #FFFFFF;
+    --red: #E00707;
+    --grey: #8C8C8C
     }
 
 body{
-margin: 0;
-background-color: var(--white);
-font-family: Raleway;
+    margin: 0;
+    background-color: var(--white);
+    font-family: Raleway;
 }
 
 header{
@@ -91,6 +93,11 @@ a:hover{
     font-size: 2rem;
     padding: 1rem;
     border-radius: 1rem;
+    transition-duration: 0.2s;
+}
+
+.main__entete__button:hover{
+    scale: 110%;
 }
 
 .main__genre{
@@ -108,7 +115,7 @@ a:hover{
     display: flex;
     justify-content: end;
     align-items: end;
-    box-shadow: ;
+    border-radius: 1rem;
 }
 
 .main__genre__homme__title{
@@ -125,10 +132,80 @@ a:hover{
     display: flex;
     justify-content: end;
     align-items: end;
+    border-radius: 1rem
 }
 
 .main__genre__femme__title{
     padding-right: 1rem;
     font-size: 3rem;
     font-weight: bolder;
+}
+
+.main__populaire{
+    display: flex;
+    flex-direction: column;    
+}
+
+.main__populaire__title{
+    padding-left: 1rem;
+}
+
+.main__populaire__title:hover{
+    text-decoration: underline;
+}
+
+.main__populaire__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main__populaire__container__article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    border: solid var(--grey);
+    width: 25%;
+}
+
+.main__populaire__container__article__img{
+    height: 25rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.main__populaire__container__article__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.main__populaire__container__article__header__stars__img{
+    height: 1rem;
+    width: 1rem;
+}
+
+.main__populaire__container__article__p{
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.main__populaire__container__prices{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    padding-left: 1rem;
+}
+
+.main__populaire__container__prices__old{
+    text-decoration: line-through;
+}
+
+.main__populaire__container__prices__new{
+    color: var(--red);
+    padding-left: 1rem;
 }
