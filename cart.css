@@ -4,6 +4,7 @@
     --red: #E00707;
     --grey: #8C8C8C;
     --lightGrey: #EAEAEA;
+    --blue: #D4E3ED;
     }
 
 body{
@@ -69,19 +70,27 @@ nav{
 
 main{
     padding-left: 2rem;
+    margin:0,
 }
 
-form{width: 50%;}
+.form{
+    width: 40rem;
+    margin:0;
+}
 
-input{width: 100%;
-height: 2rem;
-margin-top: 0.5rem;
-margin-bottom: 0.5rem}
-
-select{width: 100%;
+input{
+    width: 39.5rem;
     height: 2rem;
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem}
+    margin-bottom: 0.5rem;
+}
+
+select{
+    width: 40rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem
+}
 
 .deliveryForm__row{
     display: flex;
@@ -90,9 +99,86 @@ select{width: 100%;
     justify-content: space-between;
 }
 
-.deliveryForm__row__input {width: 48%;}
+.deliveryForm__row__input{
+    width: 19rem;
+}
 
-aside
+.modeExpedition__p{
+    background-color: var(--lightGrey);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem var(--grey);
+}
+
+.paiementForm__article{
+    background-color: var(--lightGrey);
+}
+
+.paiementForm__article__entete{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blue);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.paiementForm__article__entete__container__icon{
+    width: 2rem;
+}
+
+aside{
+    width: 40%;
+    float: right;
+    background-color: var(--lightGrey);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.aside__article{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-top: 1rem;
+}
+
+.aside__article__img{
+    width:8rem;
+}
+
+.aside__article__description{
+    padding-left: 1rem;
+    height: auto;
+    align-content: space-between;
+}
+
+.aside__reduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.aside__reduction__form{
+    width: 50%;
+    height: 3rem;
+    text-align: center;
+    border: solid var(--black);
+}
+
+.aside__reduction__button{
+    background-color: var(--grey);
+    border: solid var(--black);
+    width: 40%;
+    height: 3rem;
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
 
 h2{font-size: 2rem;}
 

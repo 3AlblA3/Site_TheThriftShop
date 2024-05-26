@@ -31,7 +31,30 @@
         </nav>
     </header>
     <main>
-        <form action="traitement" method="post">
+        <aside>
+            <h3>"" article(s) dans votre panier</h3>
+            <article class="aside__article">
+                <img class="aside__article__img" src="Ressources/articles/pantalon1.webp" alt="pantalon1">
+                <div class="aside__article__description">
+                    <h4>Turney</h4>
+                    <p>Quantité: 1</p>
+                    <h4>82$</h4>
+                </div>
+            </article>
+            <article class="aside__article">
+                <img class="aside__article__img" src="Ressources/articles/pantalon3.webp" alt="pantalon3">
+                <div class="aside__article__description">
+                    <h4>Giggs</h4>
+                    <p>Quantité: 1</p>
+                    <h4>75$</h4>
+                </div>
+            </article>
+            <form class="aside__reduction" action="reduction" method="post">
+                <input class="aside__reduction__form" type="text" id="reduction" placeholder="Code de réduction ou carte cadeau">
+                <input class="aside__reduction__button" id="submit" type="submit" value="VALIDER">
+            </form>
+        </aside>
+        <form class="form" action="traitement" method="post">
             <section class="mailForm">
                 <h2>CONTACT</h2>
                 <!-- label désigne le nom du form -->
@@ -73,15 +96,25 @@
                 <article class="paiementForm__article">
                     <div class="paiementForm__article__entete">
                         <p>Carte de crédit</p>
-        
+                        <div class="paiementForm__article__entete__container">
+                            <img class="paiementForm__article__entete__container__icon" src="Ressources/icones/logo-cb.jpg" alt="logo_cb">
+                            <img class="paiementForm__article__entete__container__icon" src="Ressources/icones/amex_icon.png" alt="amex">
+                            <img class="paiementForm__article__entete__container__icon" src="Ressources/icones/mastercard_icone.png" alt="mastercard_icone">
+                            <img class="paiementForm__article__entete__container__icon" src="Ressources/icones/paypal.png" alt="paypal">
+                        </div>
                     </div>
-        
+                    <div class="paiementForm__article__form">
+                        <input type="number" id="cardNumber" placeholder="Numéro de carte">
+                        <div>
+                            <input type="date" id="date" placeholder="Date d'expiration (MM/AA)">
+                            <input type="number" id="security" placeholder="Code de sécurité">
+
+                            in
+                        </div>
+                        <input type="text" id="carteNom" placeholder="Nom sur la carte">
+                    </div>
                 </article>
-        
             </section>
-            <aside>
-                
-            </aside>
         </form>
     </main>
 </body>
