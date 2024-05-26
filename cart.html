@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="icon" href="Ressources/icones/TheThriftShop_favicon.png" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <title>Panier</title>
+</head>
+<body>
+    <header>
+        <img class="header__logo" src="Ressources/TheThriftShop_Logo.png" alt="logo">
+        <nav>
+            <a href="#" class="header__link">E-SHOP</a>
+            <a href="#" class="header__link">NOS MAGASINS</a>
+            <a href="#" class="header__link">NOTRE MISSION</a>
+            <a class="header__menu__icon" href="#">
+                <img class="header__menu__icon__img" src="Ressources/icones/chercher.png" alt="loupe">
+                <p class="header__menu__icon__p">Recherche</p>
+            </a>
+            <a class="header__menu__icon" href="#">
+                <img class="header__menu__icon__img" src="Ressources/icones/panier.png" alt="panier">
+                <p class="header__menu__icon__p">Panier</p>
+            </a>
+            <a class="header__menu__icon" href="#">
+                <img class="header__menu__icon__img" src="Ressources/icones/connexion.png" alt="connexion">
+                <p class="header__menu__icon__p">Me connecter</p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <form action="traitement" method="post">
+            <section class="mailForm">
+                <h2>CONTACT</h2>
+                <!-- label désigne le nom du form -->
+                <input class="formBox" type="mail" id="mail" placeholder="Adresse E-mail">
+            </section>
+            <section class="deliveryForm">
+                <h2>LIVRAISON</h2>
+                <select name="pays" id="pays" placeholder="Pays/Région">
+                    <option value="" disabled selected>Pays/Région</option>
+                    <option value="france">France</option>
+                    <option value="united kingdom">United Kingdom</option>
+                    <option value="spain">Spain</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="italy">Italy</option>
+                    <option value="switzerland">Switzerland</option>
+                    <option value="netherlands">Netherlands</option>
+                    <option value="belgium">Belgium</option>
+                    <option value="germany">Germany</option>
+                </select>
+                <div class="deliveryForm__row">
+                    <input class="deliveryForm__row__input" type="text" id="nom" placeholder="Nom">
+                    <input class="deliveryForm__row__input" type="text" id="prenom" placeholder="Prénom">
+                </div>
+                <input type="text" id="enterprise" placeholder="Entreprise (optionnel)">
+                <input type="address" id="address" placeholder="Adresse">
+                <div class="deliveryForm__row">
+                    <input class="deliveryForm__row__input" type="number" id="codePostal" placeholder="Code Postal">
+                    <input class="deliveryForm__row__input" type="text" id="ville" placeholder="Ville">
+                </div>
+                <input type="number" id="phoneNumber" placeholder="Téléphone">
+            </section>
+            <section class="modeExpedition">
+                <h2>MODE D'EXPEDITION</h2>
+                <p class="modeExpedition__p">Saisissez votre adresse d’expédition pour voir les modes d’expédition disponibles.</p>
+            </section>
+            <section class="paiementForm">
+                <h2>PAIEMENT</h2>
+                <p>Toutes les transactions sont sécurisées et chiffrées</p>
+                <article class="paiementForm__article">
+                    <div class="paiementForm__article__entete">
+                        <p>Carte de crédit</p>
+        
+                    </div>
+        
+                </article>
+        
+            </section>
+            <aside>
+                
+            </aside>
+        </form>
+    </main>
+</body>
+</html>
