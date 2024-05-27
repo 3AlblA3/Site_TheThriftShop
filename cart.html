@@ -11,7 +11,9 @@
 </head>
 <body>
     <header>
-        <img class="header__logo" src="Ressources/TheThriftShop_Logo.png" alt="logo">
+        <a href="index.html">
+            <img class="header__logo" src="Ressources/TheThriftShop_Logo.png" alt="logo">
+        </a>
         <nav>
             <a href="#" class="header__link">E-SHOP</a>
             <a href="#" class="header__link">NOS MAGASINS</a>
@@ -53,6 +55,30 @@
                 <input class="aside__reduction__form" type="text" id="reduction" placeholder="Code de réduction ou carte cadeau">
                 <input class="aside__reduction__button" id="submit" type="submit" value="VALIDER">
             </form>
+            <section class="aside__amount">
+                <span class="aside__amount__row">
+                    <h4>Sous-total</h4>
+                    <h3>157 $</h3>
+                </span>
+                <span class="aside__amount__row">
+                    <h4>Livraison</h4>
+                    <p>Saisir une adresse d’expédition</p>
+                </span>
+                <span class="aside__amount__row">
+                    <h3>Total</h3>
+                    <h3>157 $</h3>
+                </span>
+            </section>
+            <span class="aside__icons">
+                <img class="aside__icons__img" src="Ressources/icones/logo-cb.jpg" alt="logo_cb">
+                <img class="aside__icons__img" src="Ressources/icones/amex_icon.png" alt="amex">
+                <img class="aside__icons__img" src="Ressources/icones/mastercard_icone.png" alt="mastercard_icone">
+                <img class="aside__icons__img" src="Ressources/icones/paypal.png" alt="paypal">
+            </span>
+            <section class="aside__footer">
+                <h4 class="aside__footer__needHelp">Besoin d'aide avec votre commande?</h4>
+                <p class="aside__footer__needHelp__p">Contactez notre service client au <a class="aside__footer__needHelp__p__a" href="#">01.01.01.01.01</a></p>
+            </section>
         </aside>
         <form class="form" action="traitement" method="post">
             <section class="mailForm">
@@ -104,18 +130,36 @@
                         </div>
                     </div>
                     <div class="paiementForm__article__form">
-                        <input type="number" id="cardNumber" placeholder="Numéro de carte">
-                        <div>
-                            <input type="date" id="date" placeholder="Date d'expiration (MM/AA)">
-                            <input type="number" id="security" placeholder="Code de sécurité">
-
-                            in
-                        </div>
-                        <input type="text" id="carteNom" placeholder="Nom sur la carte">
+                        <input class="paiementForm__article__form__input__solo" type="number" id="cardNumber" placeholder="Numéro de carte">
+                        <span class="paiementForm__article__form__row">
+                            <input class="paiementForm__article__form__row__input__duo" type="date" id="date" placeholder="Date d'expiration (MM/AA)">
+                            <input class="paiementForm__article__form__row__input__duo" type="number" id="security" placeholder="Code de sécurité">
+                        </span>
+                        <input class="paiementForm__article__form__input__solo" type="text" id="carteNom" placeholder="Nom sur la carte">
+                        <span class="paiementForm__article__form__checkbox">
+                            <input class="paiementForm__article__form__checkbox__input" type="checkbox" id="facturationAdresse" name="facturationAdresse">
+                            <label class="paiementForm__article__form__checkbox__label" for="facturationAdresse">Utiliser l’adresse d’expédition comme adresse de facturation</label>
+                        </span>
                     </div>
                 </article>
             </section>
+            <section class="souvenir">
+                <h2>SE SOUVENIR DE MOI</h2>
+                <span class="souvenir__entete">
+                    <input class="souvenir__entete__checkbox" type="checkbox" id="sauvegarde" name="sauvegarde">
+                    <label for="sauvegarde">Sauvegardez mes données pour effectuer des paiements rapidement</label>
+                </span>
+                <div class="souvenir__container">
+                    <input class="souvenir__container__input" type="number" id="telephoneNumber" placeholder="Numéro de téléphone mobile">
+                </div>
+            </section>
+            <input class="form__submit" type="submit" id="payer" value="PAYER MAINTENANT">
         </form>
+    <footer>
+        <a class="footer__link" href="#">Politique de remboursement</a>
+        <a class="footer__link" href="#">Poilitique de confidentialité</a>
+        <a class="footer__link" href="#">Conditions d'utilisation</a>
+    </footer>
     </main>
 </body>
 </html>

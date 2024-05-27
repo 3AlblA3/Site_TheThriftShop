@@ -79,6 +79,17 @@ nav{
     justify-content: center;
 }
 
+.main__entete::after{
+    background-color: rgb(0, 0, 0);
+    opacity: 100%;
+    height: 35rem;
+    width: 35rem;
+    position: absolute;
+    top: 40rem;
+    right: 40rem;
+    z-index: 3;
+}
+
 .main__entete__title{
     font-family: Lora;
     color: var(--white);
@@ -148,6 +159,12 @@ nav{
     align-items: end;
     border-radius: 1rem;
     border: solid var(--grey);
+    transition-duration: 0.2s;
+}
+
+.main__genre__femme:hover{
+    scale: 105%;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
 }
 
 .main__genre__femme__title{
