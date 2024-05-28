@@ -76,6 +76,7 @@ main{
 .form{
     width: 40rem;
     margin:0;
+    padding: 1rem;
 }
 
 input{
@@ -354,3 +355,167 @@ aside{
 
 h2{font-size: 2rem;}
 
+@media screen and (max-width: 479px){
+
+        .header__logo{
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .header__link{
+        display: none;
+    }
+
+    .header__menu__icon{
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--black)
+    }
+    
+    .header__menu__icon:hover{
+        text-decoration: underline
+    }
+    
+    .header__menu__icon__img{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .header__menu__icon__p{
+        color: var(--white);
+        height: 0rem;
+        width: 0rem;
+        display: none;
+
+    }
+
+    
+    main{
+    padding-left: 0rem;
+    margin:0,
+    }
+
+    aside{
+        width: auto;
+        border-radius: 1rem;
+        padding: 1rem;
+        position: relative;
+    }
+    
+    .aside__reduction__button{
+        font-size: 1rem;
+    }
+    
+    
+    .aside__amount{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .aside__amount__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .aside__icons{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    
+    .aside__icons__img{
+        width: 3rem;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form{
+    width: 90%;
+    margin:0;
+    padding: 1rem;
+    }
+    
+    input{
+        width: 100%;
+    }
+    
+    select{
+        width: 102%;
+    }
+    
+    .deliveryForm__row{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .deliveryForm__row__input{
+        width: 100%;
+    }
+    
+    .modeExpedition__p{
+        width: 20rem;
+    }
+    
+    .paiementForm__article__entete__container__icon{
+        width: 2rem;
+        height: 1.5rem;
+    }
+    
+    .paiementForm__article__form__input__solo{
+        width: auto;
+    }
+    
+    .paiementForm__article__form__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;}
+    
+    .paiementForm__article__form__row__input__duo{
+        width: 48%;
+        height: 2rem;
+    }
+    
+    .paiementForm__article__form__checkbox__input{
+        width: 3rem;
+    }
+    
+    .souvenir__entete{
+        width: 90%;
+    }
+    
+    .souvenir__entete__checkbox{
+        width: 3rem;
+    }
+    
+    .souvenir__container{
+        width: 90%;
+    }
+    
+    .souvenir__container__input{
+        width: 90%
+    }
+
+    
+    footer{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    
+    .footer__link{
+
+        padding:1rem
+    }
+
+}

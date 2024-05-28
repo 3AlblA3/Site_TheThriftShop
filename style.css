@@ -69,25 +69,16 @@ nav{
 }
 
 .main__entete{
-    background-image: url('Ressources/Backgrounds/entete.jpg');    
-    height: 35rem;
-    width: screen;
+    background-image: url(Ressources/Backgrounds/entete.jpg);
+    backdrop-filter: brightness(60%); 
+    height: 37.5rem;
+    width: 100%;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.main__entete::after{
-    background-color: rgb(0, 0, 0);
-    opacity: 100%;
-    height: 35rem;
-    width: 35rem;
-    position: absolute;
-    top: 40rem;
-    right: 40rem;
-    z-index: 3;
+    z-index: 1;
 }
 
 .main__entete__title{
@@ -95,12 +86,14 @@ nav{
     color: var(--white);
     font-size: 3rem;
     text-align: center;
+    z-index: 3;
 }
 
 .main__entete__h3{
     font-family: Lora;
     color: var(--white);
     font-size: 2rem;
+    z-index: 3;
 }
 
 .main__entete__button{
@@ -110,6 +103,7 @@ nav{
     padding: 1rem;
     border-radius: 1rem;
     transition-duration: 0.2s;
+    z-index: 3;
 }
 
 .main__entete__button:hover{
@@ -261,8 +255,8 @@ nav{
 }
 
 .main__member{
-    background-image: url('Ressources/Backgrounds/background_form.jpg');    
-    height: 35rem;
+    background-image: url(Ressources/Backgrounds/background_form.jpg); 
+    height: 36.5rem;
     width: screen;
     background-size: cover;
     display: flex;
@@ -272,6 +266,7 @@ nav{
     padding-bottom: 1rem;
     margin-bottom: 5rem;
     margin-top: 4rem;
+    z-index: 1;
 }
 
 .main__member__title{
@@ -280,6 +275,8 @@ nav{
     font-size: 3rem;
     text-align: center;
     margin-bottom: 0.5rem;
+    z-index: 3;
+
 }
 
 .main__member__h3{
@@ -288,6 +285,8 @@ nav{
     font-size: 2rem;
     text-align: center;
     padding: 3rem;
+    z-index: 3;
+
 }
 
 .main__member__button{
@@ -299,12 +298,15 @@ nav{
     transition-duration: 0.2s;
     margin-left: 2rem;
     margin-right: 2rem;
+    z-index: 3;
+
 }
 
 .main__member__button:hover{
     scale: 110%;
     box-shadow: 0.5rem 0.5rem 0.5rem var(--black)
 }
+
 
 .footer__container{
     display: flex;
@@ -366,3 +368,179 @@ flex-direction: row;
     text-decoration: underline;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1179px){
+
+
+}
+    
+@media screen and (max-width: 479px){
+
+    .header__logo{
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .header__link{
+        display: none;
+    }
+
+    .header__menu__icon{
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--black)
+    }
+    
+    .header__menu__icon:hover{
+        text-decoration: underline
+    }
+    
+    .header__menu__icon__img{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .header__menu__icon__p{
+        color: var(--white);
+        height: 0rem;
+        width: 0rem;
+        display: none;
+
+    }
+
+    .main__entete{
+        background-image: url(Ressources/Backgrounds/entete.jpg);
+        height: 30rem;
+
+    }
+    
+    .main__entete__title{
+        font-size: 2rem;
+        text-align: center;
+
+    }
+    
+    .main__entete__h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .main__entete__button{
+        width: 18rem;
+        z-index: 3;
+    }
+    
+    .main__genre{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem;
+    
+    }
+    
+    .main__genre__homme{
+        height: 15rem;
+        width: 9rem;
+
+    }
+    
+    .main__genre__homme__title{
+        padding-right: 1rem;
+        font-size: 1rem;
+        font-weight:bolder;
+    }
+    
+    .main__genre__femme{
+        height: 15rem;
+        width: 9rem;
+    }
+    
+    
+    .main__genre__femme__title{
+        padding-right: 1rem;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    
+    .main__populaire{
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .main__populaire__title{
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+
+    .main__populaire__container :nth-child(3){
+        display: none;
+    }
+    
+    .main__populaire__container__article{
+        width: 42%; 
+    }
+
+    
+    .main__populaire__container__article__img{
+        height: 12rem;
+    }
+    
+    .main__populaire__container__article__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+    }
+    
+    .main__populaire__container__article__header__stars__img{
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+    
+    .main__member{
+        background-image: url(Ressources/Backgrounds/background_form.jpg); 
+        height: 25rem;
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        z-index: 1;
+        padding: 1rem;
+    }
+    
+    .main__member__title{
+        font-size: 2rem;
+    }
+    
+    .main__member__h3{
+        font-size: 1rem;
+        padding: 1%;
+
+    }
+    
+    .main__member__button{
+        width: 6rem;
+        font-size: 0.75rem;
+    
+    }
+
+    .footer__container__links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .footer__container__links__p{
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+}
