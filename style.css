@@ -157,8 +157,28 @@ main{
     flex-direction: row;
     justify-content: space-around;
     padding: 4rem;
+    /* position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease; */
+  }
 
-}
+  /* .main__populaire{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .main__genre.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .main__populaire.active{
+    transform: translateY(0);
+    opacity: 1;
+  } */
 
 .main__genre__homme{
     background-image: url(Ressources/articles/Hommes.webp);
