@@ -19,7 +19,7 @@ header{
     border-bottom: solid var(--black) ;
 }
 
-.header__logo{
+.header__nav__logo{
     height: 8rem;
     width: 8rem;}
 
@@ -31,13 +31,18 @@ nav{
     align-items: center;
 }
 
+.header__nav__container__deroulant{
+    display: none;
+}
+
+
 .header__nav__container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.header__link{
+.header__nav__container__link{
     padding: 1rem;
     font-size: 1.5rem;
     color: var(--black);
@@ -46,11 +51,11 @@ nav{
     margin-left: 3rem;
 }
 
-.header__link:hover{
+.header__nav__container__link:hover{
     text-decoration: underline
 }
 
-.header__menu__icon{
+.header__nav__container__menu__icon{
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -59,16 +64,16 @@ nav{
     color: var(--black)
 }
 
-.header__menu__icon:hover{
+.header__nav__container__menu__icon:hover{
     text-decoration: underline
 }
 
-.header__menu__icon__img{
+.header__nav__container__menu__icon__img{
     height: 2rem;
     width: 2rem;
 }
 
-.header__menu__icon__p{
+.header__nav__container__menu__icon__p{
     padding-top: 0.2rem;
     margin-top: 0;
     font-size: 1rem;
@@ -347,8 +352,8 @@ aside{
 .aside__footer__needHelp::before{
     content: url("Ressources/icones/telephone_mini.png");
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
     }
 
 .aside__footer__needHelp__phone{
@@ -370,21 +375,21 @@ h2{font-size: 2rem;}
 
 @media screen and (min-width: 480px) and (max-width: 1179px){
 
-    .header__logo{
+    .header__nav__logo{
         height: 6rem;
         width: 6rem;}
     
     
-    .header__link{
-        padding: 1rem;
-        font-size: 1rem;
+    .header__nav__container__link{
+        padding: 0.8rem;
+        font-size: 0.8rem;
     }
 
-    .header__menu__icon__p{
+    .header__nav__container__menu__icon__p{
         display: none;
     }
 
-    .header__menu__icon{
+    .header__nav__container__menu__icon{
         padding: 1rem;
     }
 
@@ -485,7 +490,7 @@ h2{font-size: 2rem;}
         }
         
         .souvenir__entete{
-            width: 90%;
+            width: 95%;
         }
         
         .souvenir__entete__checkbox{
@@ -493,7 +498,7 @@ h2{font-size: 2rem;}
         }
         
         .souvenir__container{
-            width: 90%;
+            width: 95%;
         }
         
         .souvenir__container__input{
@@ -519,16 +524,51 @@ h2{font-size: 2rem;}
 
 @media screen and (max-width: 479px){
 
-        .header__logo{
+        .header__nav__logo{
         height: 4rem;
         width: 4rem;
     }
 
-    .header__link{
+    .header__nav__container__deroulant{
+        display:contents;
+        transition-duration: 0.5s;
+    }
+
+    .header__nav__container__deroulant__sous{
+        display: none;
+        box-shadow: 0px 1px 2px var(--grey);
+        background-color: white;
+        position: absolute;
+        top: 3rem;
+        right: 10rem;
+        width: 40%;
+        z-index: 3;
+        padding-left: 1.5rem;
+
+    }
+
+    .header__nav__container__deroulant:active{
+        .header__nav__container__deroulant__sous{
+            display:contents;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .header__nav__container__deroulant__sous a{
+        padding: 0.5rem;
+        text-decoration: none;
+        color: var(--black);
+    }
+    .header__nav__container__deroulant__sous a:hover{
+        text-decoration: underline;
+    }
+
+    .header__nav__container__link{
         display: none;
     }
 
-    .header__menu__icon{
+    .header__nav__container__menu__icon{
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -537,22 +577,36 @@ h2{font-size: 2rem;}
         color: var(--black)
     }
     
-    .header__menu__icon:hover{
+    .header__nav__container__menu__icon__p:hover{
         text-decoration: underline
     }
     
-    .header__menu__icon__img{
+    .header__nav__container__menu__icon__img{
         height: 1rem;
         width: 1rem;
     }
     
-    .header__menu__icon__p{
+    .header__nav__container__menu__icon__p{
         color: var(--white);
         height: 0rem;
         width: 0rem;
         display: none;
 
     }
+
+    .header__nav__container__menu__mobile{
+        display:contents;
+        height: 1rem;
+        width: 1rem;
+
+    }
+
+    .header__nav__container__menu__mobile__img{
+        height: 1rem;
+        width:1rem;
+        padding-right: 10rem;
+    }
+
 
     
     main{
