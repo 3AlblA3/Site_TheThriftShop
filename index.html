@@ -12,25 +12,34 @@
 <header>
     <nav>
         <a href="index.html">
-            <img class="header__logo" src="Ressources/TheThriftShop_Logo.png" alt="logo">
+            <img class="header__nav__logo" src="Ressources/TheThriftShop_Logo.png" alt="logo">
         </a>
         <span class="header__nav__container">
-            <a href="#" class="header__link">E-SHOP</a>
-            <a href="#" class="header__link">NOS MAGASINS</a>
-            <a href="#" class="header__link">NOTRE MISSION</a>
+            <li class="header__nav__container__deroulant"><a class="header__nav__container__menu__mobile"  href="#">
+                <img class="header__nav__container__menu__mobile__img" src="Ressources/icones/menu.png" alt="menu">
+                </a>
+                <ul class="header__nav__container__deroulant__sous">
+                    <li><a href="#">E-SHOP</a></li>
+                    <li><a href="#">NOS MAGASINS</a></li>
+                    <li><a href="#">NOTRE MISSION</a></li>
+                </ul>
+            </li>
+            <a href="#" class="header__nav__container__link">E-SHOP</a>
+            <a href="#" class="header__nav__container__link">NOS MAGASINS</a>
+            <a href="#" class="header__nav__container__link">NOTRE MISSION</a>
         </span>
         <span class="header__nav__container">
-            <a class="header__menu__icon" href="#">
-                <img class="header__menu__icon__img" src="Ressources/icones/chercher.png" alt="loupe">
-                <p class="header__menu__icon__p">Recherche</p>
+            <a class="header__nav__container__menu__icon" href="#">
+                <img class="header__nav__container__menu__icon__img" src="Ressources/icones/chercher.png" alt="loupe">
+                <p class="header__nav__container__menu__icon__p">Recherche</p>
             </a>
-            <a class="header__menu__icon" href="cart.html">
-                <img class="header__menu__icon__img" src="Ressources/icones/panier.png" alt="panier">
-                <p class="header__menu__icon__p">Panier</p>
+            <a class="header__nav__container__menu__icon" href="cart.html">
+                <img class="header__nav__container__menu__icon__img" src="Ressources/icones/panier.png" alt="panier">
+                <p class="header__nav__container__menu__icon__p">Panier</p>
             </a>
-            <a class="header__menu__icon" href="#">
-                <img class="header__menu__icon__img" src="Ressources/icones/connexion.png" alt="connexion">
-                <p class="header__menu__icon__p">Me connecter</p>
+            <a class="header__nav__container__menu__icon" href="#">
+                <img class="header__nav__container__menu__icon__img" src="Ressources/icones/connexion.png" alt="connexion">
+                <p class="header__nav__container__menu__icon__p">Me connecter</p>
             </a>
         </span>
     </nav>
@@ -191,6 +200,7 @@
     </section>
     <div class="footer__countries"><a class="footer__countries__p" href="#">United Kingdom </a>-<a class="footer__countries__p" href="#"> France </a>-<a class="footer__countries__p" href="#"> Germany </a>-<a class="footer__countries__p" href="#"> Belgium </a>-<a class="footer__countries__p" href="#"> Netherlands </a>-<a class="footer__countries__p" href="#"> Italy </a>-<a class="footer__countries__p" href="#"> Spain </a>-<a class="footer__countries__p" href="#"> Portugal </a>-<a class="footer__countries__p" href="#"> Switzerland </a></div>
 </footer>
+<script src="script.js"></script>
 <body>
     
 </body>
