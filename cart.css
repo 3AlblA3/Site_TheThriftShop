@@ -1,3 +1,5 @@
+/* Deskot and général */
+
 :root{
     --black: #1E1E1E;
     --white: #FFFFFF;
@@ -13,6 +15,8 @@ body{
     font-family: Raleway;
 }
 
+/* Header */
+
 header{
     display: flex;
     flex-direction: row;
@@ -21,7 +25,8 @@ header{
 
 .header__nav__logo{
     height: 8rem;
-    width: 8rem;}
+    width: 8rem;
+}
 
 nav{
     width: 100%;
@@ -40,6 +45,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .header__nav__container__link{
@@ -51,21 +57,21 @@ nav{
     margin-left: 3rem;
 }
 
-.header__nav__container__link:hover{
+.header__nav__container__link:hover,
+.header__nav__container__menu__icon:hover,
+.header__nav__container__menu__icon__panier:hover{
     text-decoration: underline
 }
 
-.header__nav__container__menu__icon{
+.header__nav__container__menu__icon,
+.header__nav__container__menu__icon__panier
+ {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: var(--black)
-}
-
-.header__nav__container__menu__icon:hover{
-    text-decoration: underline
 }
 
 .header__nav__container__menu__icon__img{
@@ -78,10 +84,16 @@ nav{
     margin-top: 0;
     font-size: 1rem;
 }
+
+ 
+/* main */
+
 main{
     padding-left: 2rem;
     margin:0,
 }
+
+/* formulaire */
 
 .form{
     width: 40rem;
@@ -119,6 +131,7 @@ select{
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.5rem var(--grey);
+    width: auto;
 }
 
 .paiementForm__article{
@@ -134,7 +147,7 @@ select{
     justify-content: space-between;
     padding: 1rem;
     border-bottom: solid var(--grey);
-    box-shadow: 0.2rem 0rem 0.5rem var(--grey)
+    box-shadow: 0.2rem 0rem 0.5rem var(--grey);
 }
 
 .paiementForm__article__entete__container__icon{
@@ -245,6 +258,8 @@ footer{
     text-decoration: underline;
 }
 
+/* aside */
+
 aside{
     width: 40%;
     float: right;
@@ -332,6 +347,8 @@ aside{
 
 .aside__icons__img{
     width: 3rem;
+    height: 2rem;
+    padding: 0.2rem;
 }
 
 .aside__footer{
@@ -372,6 +389,8 @@ aside{
 }
 
 h2{font-size: 2rem;}
+
+/* tablet */
 
 @media screen and (min-width: 480px) and (max-width: 1179px){
 
@@ -443,7 +462,8 @@ h2{font-size: 2rem;}
         padding: 1rem;
         }
         
-        input{
+        input,
+        .deliveryForm__row__input{
             width: 100%;
         }
         
@@ -455,15 +475,13 @@ h2{font-size: 2rem;}
             display: flex;
             flex-direction: column;
         }
-        
-        .deliveryForm__row__input{
-            width: 100%;
-        }
-        
+    
         .modeExpedition__p{
             width: auto;
             text-align: center;
         }
+
+
         
         .paiementForm__article__entete__container__icon{
             width: 2rem;
@@ -485,21 +503,15 @@ h2{font-size: 2rem;}
             height: 2rem;
         }
         
-        .paiementForm__article__form__checkbox__input{
-            width: 3rem;
-        }
-        
-        .souvenir__entete{
-            width: 95%;
-        }
-        
+        .paiementForm__article__form__checkbox__input,
         .souvenir__entete__checkbox{
             width: 3rem;
         }
         
+        .souvenir__entete,
         .souvenir__container{
-            width: 95%;
-        }
+            width: auto;
+        }    
         
         .souvenir__container__input{
             width: 90%
@@ -507,19 +519,19 @@ h2{font-size: 2rem;}
     
         
         footer{
-            width: 90%;
+            width: auto;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-    
         }
         
         .footer__link{
-    
             padding:1rem
         }
     
     }
+
+/* phone */
 
 
 @media screen and (max-width: 479px){
@@ -540,7 +552,7 @@ h2{font-size: 2rem;}
         background-color: white;
         position: absolute;
         top: 3rem;
-        right: 10rem;
+        right: 0rem;
         width: 40%;
         z-index: 3;
         padding-left: 1.5rem;
@@ -577,22 +589,12 @@ h2{font-size: 2rem;}
         color: var(--black)
     }
     
-    .header__nav__container__menu__icon__p:hover{
-        text-decoration: underline
-    }
     
     .header__nav__container__menu__icon__img{
         height: 1rem;
         width: 1rem;
     }
     
-    .header__nav__container__menu__icon__p{
-        color: var(--white);
-        height: 0rem;
-        width: 0rem;
-        display: none;
-
-    }
 
     .header__nav__container__menu__mobile{
         display:contents;
@@ -600,14 +602,21 @@ h2{font-size: 2rem;}
         width: 1rem;
 
     }
-
     .header__nav__container__menu__mobile__img{
         height: 1rem;
         width:1rem;
-        padding-right: 10rem;
     }
 
+    .header__nav__container__menu__icon,
+    .header__nav__container__menu__icon__p{
+        display: none;
+    }   
 
+    li{
+        list-style-type: none;
+        padding-bottom: 0.2rem;
+        padding-top: 0.2rem;
+    }
     
     main{
     padding-left: 0rem;
@@ -616,7 +625,7 @@ h2{font-size: 2rem;}
 
     aside{
         width: auto;
-        border-radius: 1rem;
+        border-radius: 0rem;
         padding: 1rem;
         position: relative;
     }
@@ -660,11 +669,11 @@ h2{font-size: 2rem;}
     }
     
     input{
-        width: 100%;
+        width: 98%;
     }
     
     select{
-        width: 102%;
+        width: 100%;
     }
     
     .deliveryForm__row{
@@ -673,11 +682,11 @@ h2{font-size: 2rem;}
     }
     
     .deliveryForm__row__input{
-        width: 100%;
+        width: 98%;
     }
     
     .modeExpedition__p{
-        width: 20rem;
+        width: auto;
     }
     
     .paiementForm__article__entete__container__icon{
@@ -705,7 +714,8 @@ h2{font-size: 2rem;}
     }
     
     .souvenir__entete{
-        width: 90%;
+        width: auto;
+
     }
     
     .souvenir__entete__checkbox{
@@ -713,7 +723,7 @@ h2{font-size: 2rem;}
     }
     
     .souvenir__container{
-        width: 90%;
+        width: auto;
     }
     
     .souvenir__container__input{
@@ -722,15 +732,14 @@ h2{font-size: 2rem;}
 
     
     footer{
-        width: 90%;
+        width: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-
+        align-items: center;
     }
     
     .footer__link{
-
         padding:1rem
     }
 

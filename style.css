@@ -1,3 +1,5 @@
+/* Deskot et général */
+
 :root{
     --black: #1E1E1E;
     --white: #FFFFFF;
@@ -13,6 +15,7 @@ body{
     font-family: Raleway;       
 } 
 
+/* Header */
 
 header{
     display: flex;
@@ -38,7 +41,8 @@ header{
 
 .header__nav__logo{
     height: 8rem;
-    width: 8rem;}
+    width: 8rem;
+}
 
 nav{
     width: 100%;
@@ -57,6 +61,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .header__nav__container__link{
@@ -68,21 +73,21 @@ nav{
     margin-left: 3rem;
 }
 
-.header__nav__container__link:hover{
+.header__nav__container__link:hover,
+.header__nav__container__menu__icon:hover,
+.header__nav__container__menu__icon__panier:hover{
     text-decoration: underline
 }
 
-.header__nav__container__menu__icon{
-    padding: 2rem;
+.header__nav__container__menu__icon,
+.header__nav__container__menu__icon__panier
+ {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: var(--black)
-}
-
-.header__nav__container__menu__icon:hover{
-    text-decoration: underline
 }
 
 .header__nav__container__menu__icon__img{
@@ -95,6 +100,8 @@ nav{
     margin-top: 0;
     font-size: 1rem;
 }
+
+/* Main */
 
 main{    
     animation-duration: 1500ms;
@@ -162,58 +169,23 @@ main{
     flex-direction: row;
     justify-content: space-around;
     padding: 4rem;
-    /* position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease; */
-  }
-
-  /* .main__populaire{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  
-  .main__genre.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .main__populaire.active{
-    transform: translateY(0);
-    opacity: 1;
-  } */
+}
 
 .main__genre__homme{
     background-image: url(Ressources/articles/Hommes.webp);
-    background-size: cover;
-    height: 40rem;
-    width: 30rem;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    border-radius: 1rem;
-    border: solid var(--grey);
-    transition-duration: 0.2s;
-}
-
-.main__genre__homme:hover{
-    scale: 105%;
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
-}
-
-.main__genre__homme__title{
-    padding-right: 1rem;
-    font-size: 3rem;
-    font-weight: bolder;
 }
 
 .main__genre__femme{
     background-image: url(Ressources/articles/Femmes.webp);
-    background-size: cover;
-    height: 40rem;
-    width: 30rem;
+}
+
+
+.main__genre__homme,
+.main__genre__femme{
+    height: 32rem;
+    width: 25rem;
+    background-size: 25rem 35rem;
+    background-position: 0rem 0rem;
     display: flex;
     justify-content: end;
     align-items: end;
@@ -222,16 +194,22 @@ main{
     transition-duration: 0.2s;
 }
 
+
+.main__genre__homme:hover,
 .main__genre__femme:hover{
     scale: 105%;
     box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
+    background-size: 35rem 50rem;
+    background-position: -2rem 0rem;
 }
 
+.main__genre__homme__title,
 .main__genre__femme__title{
     padding-right: 1rem;
     font-size: 3rem;
     font-weight: bolder;
 }
+
 
 .main__populaire{
     display: flex;
@@ -241,9 +219,13 @@ main{
     padding-left: 3rem;
 }
 
+
+
 .main__populaire__title{
     padding-left: 1rem;
     padding-bottom: 1rem;
+    text-decoration: none;
+    color: var(--black);
 }
 
 .main__populaire__title:hover{
@@ -258,18 +240,7 @@ main{
     padding-bottom: 1rem;
 }
 
-.main__populaire__container__article{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-radius: 1rem;
-    border: solid var(--grey);
-    width: 25%;
-    transition-duration: 0.2s;
-    text-decoration: none;
-    color: var(--black)
-}
-
+.main__populaire__container__article,
 .main__populaire__container__article_3th{
     display: flex;
     flex-direction: column;
@@ -282,34 +253,19 @@ main{
     color: var(--black)
 }
 
+.main__populaire__container__article:hover,
 .main__populaire__container__article_3th:hover {
     scale: 110%;
     box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
         .main__populaire__container__article__header__title{
         text-decoration: underline;
     }
-    
-}
-
-.main__populaire__container__article:hover {
-    scale: 110%;
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
-        .main__populaire__container__article__header__title{
-        text-decoration: underline;
-    }
-    
 }
 
 .main__populaire__container__article__img{
     height: 25rem;
     border-radius: 0.85rem 0.85rem 0 0;
     width: 100%;
-}
-
-.main__populaire__container__article__img__moveUp{
-    height: 25rem;
-    border-radius: 0.85rem 0.85rem 0 0;
-    position: relative;
 }
 
 .main__populaire__container__article__header{
@@ -380,7 +336,6 @@ main{
     text-align: center;
     padding: 3rem;
     z-index: 3;
-
 }
 
 .main__member__button{
@@ -393,7 +348,6 @@ main{
     margin-left: 2rem;
     margin-right: 2rem;
     z-index: 3;
-
 }
 
 .main__member__button:hover{
@@ -401,23 +355,7 @@ main{
     box-shadow: 0.5rem 0.5rem 0.5rem var(--black)
 }
 
-footer{    animation-duration: 2000ms;
-    animation-timing-function: cubic-bezier(0,.43,.49,.99);
-    animation-name: footer;
-}
-
-@keyframes footer {
-    from { 
-    display: none;
-    opacity: 0;
-    transform: translateY(10rem);}
-    to { 
-    display: visible ;
-    opacity: 1;
-    transform: translateY(0rem);
-    }
-}
-
+/* footer */
 
 .footer__container{
     display: flex;
@@ -425,7 +363,6 @@ footer{    animation-duration: 2000ms;
     background-color: var(--lightGrey) ;
     border: solid var(--grey); 
     padding: 1rem;
-
 }
 
 .footer__container__links{
@@ -447,7 +384,6 @@ footer{    animation-duration: 2000ms;
 .footer__container__links__p:hover{
     text-decoration: underline;
 }
-
 
 .footer__container__socials__img{
     height: 2rem;
@@ -480,8 +416,9 @@ flex-direction: row;
     text-decoration: underline;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1100px){
+/* Tablet */
 
+@media screen and (min-width: 480px) and (max-width: 1100px){
     .header__nav__logo{
         height: 6rem;
         width: 6rem;}
@@ -499,27 +436,24 @@ flex-direction: row;
         padding: 1rem;
     }
 
-    .main__genre__homme{
-        height: 28rem;
-        width: 19rem;
-    }
-    
+    .main__genre__homme,
     .main__genre__femme{
         height: 28rem;
         width: 19rem;
-
     }
 
+    .main__genre__homme:hover,
+    .main__genre__femme:hover{
+        background-size: 35rem 50rem;
+        background-position: -5rem 0rem;
+}
     
-    .main__populaire__container__article__img{
-        height: 15rem;
-        border-radius: 1rem 1rem 0 0;
-    }
-
+    .main__populaire__container__article__img,
     .main__populaire__container__article__img__moveUp{
         height: 15rem;
         border-radius: 1rem 1rem 0 0;
     }
+
 
     .main__populaire__container__article__header__stars__img{
         height: 0.8rem;
@@ -544,25 +478,14 @@ flex-direction: row;
     }
 
 }
+
+/* Phone */
     
 @media screen and (max-width: 479px){
-
-    
 
     .header__nav__logo{
         height: 4rem;
         width: 4rem;
-    }
-
-    .header__nav__container__link{
-        display: none;
-    }
-
-
-    .header__nav__container__menu__mobile{
-        display:contents;
-        height: 1rem;
-        width: 1rem;
     }
 
     .header__nav__container__deroulant{
@@ -576,7 +499,7 @@ flex-direction: row;
         background-color: white;
         position: absolute;
         top: 3rem;
-        right: 10rem;
+        right: 0rem;
         width: 40%;
         z-index: 3;
         padding-left: 1.5rem;
@@ -600,10 +523,14 @@ flex-direction: row;
         text-decoration: underline;
     }
 
-    .header__nav__container__menu__mobile__img{
-        height: 1rem;
-        width:1rem;
-        padding-right: 10rem;
+    li{
+        list-style-type: none;
+        padding-bottom: 0.2rem;
+        padding-top: 0.2rem;
+    }
+
+    .header__nav__container__link{
+        display: none;
     }
 
     .header__nav__container__menu__icon{
@@ -615,7 +542,7 @@ flex-direction: row;
         color: var(--black)
     }
     
-    .header__nav__container__menu__icon:hover{
+    .header__nav__container__menu__icon__p:hover{
         text-decoration: underline
     }
     
@@ -632,10 +559,24 @@ flex-direction: row;
 
     }
 
+    .header__nav__container__menu__mobile{
+        display:contents;
+        height: 1rem;
+        width: 1rem;
+
+    }
+    .header__nav__container__menu__mobile__img{
+        height: 1rem;
+        width:1rem;
+    }
+
+    .header__nav__container__menu__icon{
+        display: none;
+    }   
+
     .main__entete{
         background-image: url(Ressources/Backgrounds/entete.jpg);
         height: 30rem;
-
     }
     
     .main__entete__title{
@@ -658,32 +599,34 @@ flex-direction: row;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 2rem;
+        padding: 1rem;
     
     }
     
-    .main__genre__homme{
-        height: 14rem;
-        width: 8rem;
-
-    }
-    
-    .main__genre__homme__title{
-        padding-right: 1rem;
-        font-size: 1rem;
-        font-weight:bolder;
-    }
-    
+    .main__genre__homme,
     .main__genre__femme{
-        height: 14rem;
-        width: 8rem;
+        height: 20rem;
+        width: 11rem;
+        background-size: 25rem 35rem;
+        background-position: -5rem -2rem;
+        @media screen and (max-width: 400px){
+            height: 20rem;
+            width: 9.5rem;
+        }
     }
     
     
+    .main__genre__homme:hover,
+    .main__genre__femme:hover{
+        background-size: 30rem 45rem;
+        background-position: -9rem -2rem;
+    }
+    
+    .main__genre__homme__title,
     .main__genre__femme__title{
         padding-right: 1rem;
         font-size: 1rem;
-        font-weight: bolder;
+        font-weight:bolder;
     }
     
     .main__populaire{
@@ -712,8 +655,10 @@ flex-direction: row;
 
     .main__populaire__container__article__img__moveUp{
         position: relative;
-        bottom:0.12rem;
         height: 12rem;
+        @media screen and (max-width: 400px){
+            bottom: 0.12rem
+        }
     }
     
     .main__populaire__container__article__header{
@@ -764,9 +709,9 @@ flex-direction: row;
     }
     
     .footer__container__links__p{
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: center;
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
 }
