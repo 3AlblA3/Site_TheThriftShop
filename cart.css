@@ -88,6 +88,7 @@ span{display: flex;
     .header__nav__container__menu__icon__p{
         padding-top: 0.2rem;
         margin-top: 0;
+        margin-bottom: 0;
         font-size: 1rem;
     }
 
