@@ -28,20 +28,22 @@ header{
 
 @keyframes header {
     from { 
-    display: none;
     opacity: 0;
     transform: translateY(-10rem);}
     to { 
-    display: visible ;
     opacity: 1;
     transform: translateY(0rem);
     }
 }
 
+span{display: flex;
+flex-direction: row;
+align-items: center;}
+
 
 .header__nav__logo{
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
 }
 
 nav{
@@ -124,7 +126,7 @@ main{
 .main__entete{
     background-image: url(Ressources/Backgrounds/entete.jpg);
     backdrop-filter: brightness(60%); 
-    height: 37.5rem;
+    height: 30rem;
     width: 100%;
     background-size: cover;
     display: flex;
@@ -168,7 +170,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .main__genre__homme{
@@ -182,9 +184,9 @@ main{
 
 .main__genre__homme,
 .main__genre__femme{
-    height: 32rem;
-    width: 25rem;
-    background-size: 25rem 35rem;
+    height: 40rem;
+    width: 35rem;
+    background-size: 35rem 42rem;
     background-position: 0rem 0rem;
     display: flex;
     justify-content: end;
@@ -199,7 +201,7 @@ main{
 .main__genre__femme:hover{
     scale: 105%;
     box-shadow: 0.5rem 0.5rem 0.5rem var(--grey);
-    background-size: 35rem 50rem;
+    background-size: 38rem 47rem;
     background-position: -2rem 0rem;
 }
 
@@ -216,10 +218,7 @@ main{
     flex-direction: column;    
     padding-bottom: 1rem;
     padding-left: 3rem;
-    padding-left: 3rem;
 }
-
-
 
 .main__populaire__title{
     padding-left: 1rem;
@@ -247,7 +246,7 @@ main{
     justify-content: space-around;
     border-radius: 1rem;
     border: solid var(--grey);
-    width: 25%;
+    width: 26%;
     transition-duration: 0.2s;
     text-decoration: none;
     color: var(--black)
@@ -275,11 +274,13 @@ main{
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin: 0
 }
 
 .main__populaire__container__article__header__stars__img{
     height: 1rem;
     width: 1rem;
+    margin: 0;
 }
 
 .main__populaire__container__article__p{
@@ -291,7 +292,7 @@ main{
 .main__populaire__container__prices{
     display: flex;
     flex-direction: row;
-    margin-top: 0;
+    margin: 0;
     padding-left: 1rem;
 }
 
@@ -306,7 +307,7 @@ main{
 
 .main__member{
     background-image: url(Ressources/Backgrounds/background_form.jpg); 
-    height: 36.5rem;
+    height: 35rem;
     width: screen;
     background-size: cover;
     display: flex;
@@ -378,7 +379,8 @@ main{
     padding-right: 1rem;
     font-size: 1rem;
     text-decoration: none;
-    color: var(--black) 
+    color: var(--black);
+    font-weight: bolder;
 }
 
 .footer__container__links__p:hover{
@@ -440,17 +442,17 @@ flex-direction: row;
     .main__genre__femme{
         height: 28rem;
         width: 19rem;
+        background-position: -8rem 0rem;
     }
 
     .main__genre__homme:hover,
     .main__genre__femme:hover{
-        background-size: 35rem 50rem;
-        background-position: -5rem 0rem;
+        background-size: 40rem 50rem;
+        background-position: -10rem 0rem;
 }
     
-    .main__populaire__container__article__img,
-    .main__populaire__container__article__img__moveUp{
-        height: 15rem;
+    .main__populaire__container__article__img{
+        height: 18rem;
         border-radius: 1rem 1rem 0 0;
     }
 
@@ -475,6 +477,10 @@ flex-direction: row;
         color: var(--white);
         font-size: 1.5rem;
         z-index: 3;
+    }
+
+    .footer__countries__p{
+        padding: 0.8rem;
     }
 
 }
@@ -503,15 +509,26 @@ flex-direction: row;
         width: 40%;
         z-index: 3;
         padding-left: 1.5rem;
-
     }
 
-    .header__nav__container__deroulant:active{
+    .header__nav__container__deroulant:hover{
         .header__nav__container__deroulant__sous{
             display:contents;
             display: flex;
             flex-direction: column;
+            animation-name: deroulant;
+            animation-duration: 0.4s;
         }
+    }
+
+    @keyframes deroulant {from { 
+        opacity: 0;
+        transform: translateY(-5rem);}
+        to { 
+        opacity: 1;
+        transform: translateY(0rem);
+        }
+        
     }
 
     .header__nav__container__deroulant__sous a{
@@ -527,6 +544,17 @@ flex-direction: row;
         list-style-type: none;
         padding-bottom: 0.2rem;
         padding-top: 0.2rem;
+    }
+
+    .header__nav__container__menu__mobile{
+        display:contents;
+        height: 1rem;
+        width: 1rem;
+
+    }
+    .header__nav__container__menu__mobile__img{
+        height: 1rem;
+        width:1rem;
     }
 
     .header__nav__container__link{
@@ -559,16 +587,7 @@ flex-direction: row;
 
     }
 
-    .header__nav__container__menu__mobile{
-        display:contents;
-        height: 1rem;
-        width: 1rem;
 
-    }
-    .header__nav__container__menu__mobile__img{
-        height: 1rem;
-        width:1rem;
-    }
 
     .header__nav__container__menu__icon{
         display: none;
@@ -608,7 +627,7 @@ flex-direction: row;
         height: 20rem;
         width: 11rem;
         background-size: 25rem 35rem;
-        background-position: -5rem -2rem;
+        background-position: -8rem -2rem;
         @media screen and (max-width: 400px){
             height: 20rem;
             width: 9.5rem;
@@ -619,7 +638,7 @@ flex-direction: row;
     .main__genre__homme:hover,
     .main__genre__femme:hover{
         background-size: 30rem 45rem;
-        background-position: -9rem -2rem;
+        background-position: -10rem -2rem;
     }
     
     .main__genre__homme__title,
@@ -677,13 +696,10 @@ flex-direction: row;
     }    
     
     .main__member{
-        background-image: url(Ressources/Backgrounds/background_form.jpg); 
-        height: 25rem;
-        padding-bottom: 1rem;
-        margin-bottom: 3rem;
+        height: 20rem;
         margin-top: 2rem;
         z-index: 1;
-        padding: 1rem;
+        padding: 0.5rem;
     }
     
     .main__member__title{
@@ -697,8 +713,9 @@ flex-direction: row;
     }
     
     .main__member__button{
-        width: 6rem;
+        width: 7rem;
         font-size: 0.75rem;
+        height: 4rem;
     
     }
 
@@ -714,4 +731,8 @@ flex-direction: row;
         padding: 0.8rem;
     }
     
+    .footer__countries__p{
+        padding: 0.2rem;
+        padding-top: 0.5rem;
+    }
 }
