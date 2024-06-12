@@ -1,5 +1,10 @@
 /* Deskot et général */
 
+a{
+    color: var(--black);
+    text-decoration: none;
+}
+
 :root{
     --black: #1E1E1E;
     --white: #FFFFFF;
