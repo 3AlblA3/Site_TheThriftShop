@@ -20,28 +20,34 @@
                 <a href="#" class="header__nav__container__link">NOS MAGASINS</a>
                 <a href="#" class="header__nav__container__link">NOTRE MISSION</a>
             </span>
-            <span class="header__nav__container">
-                <li class="header__nav__container__deroulant">
+            <div class="header__nav__container">
+                <div class="header__nav__container__deroulant">
                     <img class="header__nav__container__menu__mobile__img" src="Ressources/icones/menu.png" alt="menu">
                     <ul class="header__nav__container__deroulant__sous">
                         <li><a href="#">E-SHOP</a></li>
                         <li><a href="#">NOS MAGASINS</a></li>
                         <li><a href="#">NOTRE MISSION</a></li>
                     </ul>
-                </li>
-                <a class="header__nav__container__menu__icon" href="#">
-                    <img class="header__nav__container__menu__icon__img" src="Ressources/icones/chercher.png" alt="loupe">
-                    <p class="header__nav__container__menu__icon__p">Recherche</p>
-                </a>
-                <a class="header__nav__container__menu__icon__panier" href="cart.html">
-                    <img class="header__nav__container__menu__icon__img" src="Ressources/icones/panier.png" alt="panier">
-                    <p class="header__nav__container__menu__icon__p">Panier</p>
-                </a>
-                <a class="header__nav__container__menu__icon" href="#">
-                    <img class="header__nav__container__menu__icon__img" src="Ressources/icones/connexion.png" alt="connexion">
-                    <p class="header__nav__container__menu__icon__p">Me connecter</p>
-                </a>
-            </span>
+                </div>
+                    <div>
+                        <a class="header__nav__container__menu__icon" href="#">
+                            <img class="header__nav__container__menu__icon__img" src="Ressources/icones/chercher.png" alt="loupe">
+                            <p class="header__nav__container__menu__icon__p">Recherche</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="header__nav__container__menu__icon__panier" href="cart.html">
+                            <img class="header__nav__container__menu__icon__img" src="Ressources/icones/panier.png" alt="panier">
+                            <p class="header__nav__container__menu__icon__p">Panier</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="header__nav__container__menu__icon" href="#">
+                            <img class="header__nav__container__menu__icon__img" src="Ressources/icones/connexion.png" alt="connexion">
+                            <p class="header__nav__container__menu__icon__p">Me connecter</p>
+                        </a>
+                    </div>
+                </div>
         </nav>
     </header>
     <main>
@@ -68,18 +74,18 @@
                 <input class="aside__reduction__button" id="submit" type="submit" value="VALIDER">
             </form>
             <section class="aside__amount">
-                <span class="aside__amount__row">
+                <div class="aside__amount__row">
                     <h4>Sous-total</h4>
                     <h3>157 $</h3>
-                </span>
-                <span class="aside__amount__row">
+                </div>
+                <div class="aside__amount__row">
                     <h4>Livraison</h4>
                     <p>Saisir une adresse d’expédition</p>
-                </span>
-                <span class="aside__amount__row">
+                </div>
+                <div class="aside__amount__row">
                     <h3>Total</h3>
                     <h3>157 $</h3>
-                </span>
+                </div>
             </section>
             <span class="aside__icons">
                 <img class="aside__icons__img" src="Ressources/icones/logo-cb.jpg" alt="logo_cb">
@@ -96,11 +102,11 @@
             <section class="mailForm">
                 <h2>CONTACT</h2>
                 <!-- label désigne le nom du form -->
-                <input class="formBox" type="mail" id="mail" placeholder="Adresse E-mail">
+                <input class="formBox" type="email" id="mail" placeholder="Adresse E-mail">
             </section>
             <section class="deliveryForm">
                 <h2>LIVRAISON</h2>
-                <select name="pays" id="pays" placeholder="Pays/Région">
+                <select name="pays" id="pays">
                     <option value="" disabled selected>Pays/Région</option>
                     <option value="france">France</option>
                     <option value="united kingdom">United Kingdom</option>
@@ -117,7 +123,7 @@
                     <input class="deliveryForm__row__input" type="text" id="prenom" placeholder="Prénom">
                 </div>
                 <input type="text" id="enterprise" placeholder="Entreprise (optionnel)">
-                <input type="address" id="address" placeholder="Adresse">
+                <input type="text" id="address" placeholder="Adresse">
                 <div class="deliveryForm__row">
                     <input class="deliveryForm__row__input" type="number" id="codePostal" placeholder="Code Postal">
                     <input class="deliveryForm__row__input" type="text" id="ville" placeholder="Ville">
@@ -133,7 +139,7 @@
                 <p>Toutes les transactions sont sécurisées et chiffrées</p>
                 <article class="paiementForm__article">
                     <div class="paiementForm__article__entete">
-                        <p>Carte de crédit</p>
+                        <h5>Carte de crédit</h5>
                         <div class="paiementForm__article__entete__container">
                             <img class="paiementForm__article__entete__container__icon" src="Ressources/icones/logo-cb.jpg" alt="logo_cb">
                             <img class="paiementForm__article__entete__container__icon" src="Ressources/icones/amex_icon.png" alt="amex">
@@ -144,7 +150,7 @@
                     <div class="paiementForm__article__form">
                         <input class="paiementForm__article__form__input__solo" type="number" id="cardNumber" placeholder="Numéro de carte">
                         <span class="paiementForm__article__form__row">
-                            <input class="paiementForm__article__form__row__input__duo" type="month" id="date" placeholder="Date d'expiration (MM/AA)" >
+                            <input class="paiementForm__article__form__row__input__duo" type="month" id="date">
                             <input class="paiementForm__article__form__row__input__duo" type="number" id="security" placeholder="Code de sécurité">
                         </span>
                         <input class="paiementForm__article__form__input__solo" type="text" id="carteNom" placeholder="Nom sur la carte">
@@ -170,9 +176,9 @@
     </main>
     <footer>
         <section class="footer__container">
-            <a class="footer__link" href="#">Politique de remboursement</a>
-            <a class="footer__link" href="#">Poilitique de confidentialité</a>
-            <a class="footer__link" href="#">Conditions d'utilisation</a>
+            <a class="footer__link" href="#"><h5>Politique de remboursement</h5></a>
+            <a class="footer__link" href="#"><h5>Politique de confidentialité</h5></a>
+            <a class="footer__link" href="#"><h5>Conditions d'utilisation</h5></a>
         </section>
     </footer>
 </body>

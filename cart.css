@@ -1,5 +1,7 @@
 /* Deskot and général */
 
+
+
 :root{
     --black: #1E1E1E;
     --white: #FFFFFF;
@@ -769,7 +771,7 @@ h2{font-size: 2rem;}
 
     
     footer{
-        width: 95%;
+        width: 91%;
         padding: 1rem;
     }
     
