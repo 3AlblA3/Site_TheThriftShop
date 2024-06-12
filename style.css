@@ -148,6 +148,8 @@ main{
     font-size: 3rem;
     text-align: center;
     z-index: 3;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .main__entete__h3{
